@@ -1160,6 +1160,10 @@ hr {
   border-radius: 20px 0px;
 }
 
+.assistance {
+  width: 18px;
+}
+
 .img-icon-route {
   z-index: 1000000;
   width: 20px;
