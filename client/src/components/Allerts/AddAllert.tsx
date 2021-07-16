@@ -99,7 +99,12 @@ const AddAllert: React.FC<AddAllertProps> = (props) => {
           { mappedColors }
         </div>
         <div className="add-btn-block">
-          <button onClick={submitHandler} className="btn-allert-modal">Save</button>
+          <button
+            onClick={submitHandler}
+            className="btn-allert-modal"
+          >
+            Save
+          </button>
         </div>
       </div>
     </div>

@@ -64,7 +64,12 @@ const DashboardModal: React.FC<DashboradModalProps> = (props) => {
       <div className="dashboard-modal-block">
         <div className="close-block-modal">
           <div className="close-btn">
-            <span onClick={closeHandler} className="material-icons">close</span>
+            <span
+              onClick={closeHandler}
+              className="material-icons"
+            >
+              close
+            </span>
           </div>
         </div>
         <div className="dashboard-modal-block-in">

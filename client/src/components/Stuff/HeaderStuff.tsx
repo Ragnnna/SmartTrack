@@ -20,16 +20,30 @@ const HeaderStuff: React.FC<HeaderStuffProps> = (props) => {
   return (
     <div className="header-stuff">
       <nav className="stuff-navigation">
-        <div><NavLink className="stuff-title" to="/stuff/doctors">Doctors</NavLink></div>
-        <div><NavLink className="stuff-title" to="/stuff/assitance">Assistance</NavLink></div>
-        <div><NavLink className="stuff-title" to="/stuff/receptionist">Receptionist</NavLink></div>
+        <div>
+          <NavLink className="stuff-title" to="/stuff/doctors">Doctors</NavLink>
+        </div>
+        <div>
+          <NavLink className="stuff-title" to="/stuff/assitance">Assistance</NavLink>
+        </div>
+        <div>
+          <NavLink className="stuff-title" to="/stuff/receptionist">Receptionist</NavLink>
+        </div>
       </nav>
       { context.getUserType() === 'admin' &&
       <div className="add-btn-block">
-        <button disabled={!typeUserString} onClick={openModal}>Add new</button>
+        <button
+          disabled={!typeUserString}
+          onClick={openModal}>
+            Add new
+        </button>
       </div>
       }
-      { props.modaltoggle && <AddUser closeModal={closeModal} type="Add new" userData={{ option: false }}/>}
+      { props.modaltoggle && <AddUser
+        closeModal={closeModal}
+        type="Add new"
+        userData={{ option: false }}
+        />}
     </div>
   )
 }

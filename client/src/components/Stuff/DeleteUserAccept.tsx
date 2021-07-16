@@ -15,8 +15,10 @@ const DeleteUserAccept: React.FC<DeleteUserAcceptProps> = (props) => {
   }
   const closeHandler = (): void => props.setDeleteModal(false)
 
-  const userType =  typeUserString === 'doctors' ? 'doctor' 
-  : typeUserString === 'receptionist' ? 'receptionist' 
+  const userType =  typeUserString === 'doctors'
+  ? 'doctor' 
+  : typeUserString === 'receptionist' 
+  ? 'receptionist' 
   :  'assitance'
   return(
     <div className="modal-add-user-background">

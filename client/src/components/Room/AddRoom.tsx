@@ -54,7 +54,10 @@ const AddRoom: React.FC<AddRoomProps> = (props) => {
     <div className="add-room-background">
       <div className="add-room-block">
         <div className="close-block">
-          <div onClick={() => closeModal()} className="close-btn">
+          <div
+            onClick={() => closeModal()}
+            className="close-btn"
+          >
             <span className="material-icons">close</span>
           </div>
         </div>
@@ -71,7 +74,12 @@ const AddRoom: React.FC<AddRoomProps> = (props) => {
           </label>
         </div>
         <div className="add-btn-block">
-          <button onClick={submitHandler} className="btn-allert-modal">Save</button>
+          <button
+            onClick={submitHandler}
+            className="btn-allert-modal"
+          >
+            Save
+          </button>
         </div>
       </div>
     </div>

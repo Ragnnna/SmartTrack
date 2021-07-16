@@ -70,10 +70,22 @@ const AddUser: React.FC<AddUserProps> = (props) => {
   useEffect(() => {
     if (option === true) {
       if(props.userData.allerts === ""){
-        return setUser((state: any) => ({ ...state, name: name, email: email, phone: phone, allerts: [] }))
+        return setUser((state: any) => ({
+          ...state,
+          name: name,
+          email: email,
+          phone: phone,
+          allerts: [] 
+        }))
       }
       const userAllerts = JSON.parse(props.userData.allerts!)
-      return setUser((state: any) => ({ ...state, name: name, email: email, phone: phone, allerts: userAllerts }))
+      return setUser((state: any) => ({
+        ...state,
+        name: name,
+        email: email,
+        phone: phone,
+        allerts: userAllerts
+      }))
     }
   }, [email, name, option, phone, props.userData.allerts])
 
@@ -103,9 +115,18 @@ const AddUser: React.FC<AddUserProps> = (props) => {
   />)
 
   const addedAllerts = user.allerts.map((el: any) => {
-    return <div key={el.id} className="allert-item-list">
-            <div style={{backgroundColor: el.color}} className="color-circle"></div>
-            <div className="allert-item-list-title">{titleNormalize(el.title)}</div>
+    return <div 
+              key={el.id}
+              className="allert-item-list"
+            >
+            <div
+              style={{backgroundColor: el.color}}
+              className="color-circle">
+            </div>
+            <div
+              className="allert-item-list-title">
+                {titleNormalize(el.title)}
+            </div>
           </div>
   })
 
@@ -264,7 +285,8 @@ const AddUser: React.FC<AddUserProps> = (props) => {
     })
   } 
 
-  const userType =  typeUserString === 'doctors' ? 'Doctor' 
+  const userType =  typeUserString === 'doctors' 
+  ? 'Doctor' 
   : typeUserString === 'receptionist' ? 'Receptionist' 
   :  'Assitance'
 
@@ -278,7 +300,14 @@ const AddUser: React.FC<AddUserProps> = (props) => {
       updatedDoctorAllerts({
         variables: {
           email: user.email,
-          allerts: JSON.stringify([{ id: 999, title: 'empty', color: '#FFFFFF', isActive: false, room: '', dateAdd: '' }])
+          allerts:JSON.stringify([{
+            id: 999,
+            title: 'empty',
+            color: '#FFFFFF',
+            isActive: false,
+            room: '',
+            dateAdd: ''
+          }])
         }
       }).then(res => {
         if(res){

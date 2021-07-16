@@ -20,7 +20,13 @@ const DoctorResponsibilities: React.FC<DoctorResponsibilitiesProps> = (props) =>
   const updateAllert = (email: string, allertID: string, allert: any) => {
     const newAllerts = allerts.map((el: any) => {
       if(el.id === allertID){
-        return { ...el, color: allert.color, title: allert.title, dateAdd: Date.now() }
+        return { 
+          ...el,
+          color:
+          allert.color,
+          title: allert.title, 
+          dateAdd: Date.now() 
+        }
       }
       return el
     })

@@ -28,7 +28,13 @@ const Dashboard: React.FC<DashBoardProps> = (props) => {
       .find(el => el.email === email)?.allerts!)
     const newAllerts = doctorAllerts.map((el: any) => {
       if(el.id === allertID){
-        return { ...el, color: allert.color, title: allert.title, dateAdd: Date.now() }
+        return {
+          ...el,
+          color:
+          allert.color,
+          title: allert.title,
+          dateAdd: Date.now()
+        }
       }
       return el
     })
@@ -45,7 +51,15 @@ const Dashboard: React.FC<DashBoardProps> = (props) => {
   }
 
   const resetAllerts = (email: string) => {
-    const newAllerts = JSON.stringify([{ id: 999, title: 'empty', color: '#FFFFFF', isActive: false, room: '', dateAdd: '' }])
+    const newAllerts = JSON.stringify([{
+      id: 999, title:
+      'empty', color:
+      '#FFFFFF',
+      isActive: false,
+      room: '',
+      dateAdd: '' 
+    }])
+    
     updatedAllerts({
       variables: {
         email,

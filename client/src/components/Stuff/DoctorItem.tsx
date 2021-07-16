@@ -49,19 +49,42 @@ const DoctorItem: React.FC<DoctorItemProps> = (props) => {
 
   return (
     <div className="doctor-block">
-      <div className="index-doctor list-element"><p>{idx! + 1}</p></div>
-      <div className="doctor-name list-element list-element-title"><p className="list-title-name">{ name} </p></div>
-      <div className="doctor-email list-element list-element-title"><p>{ email }</p></div>
-      <div className="doctor-number list-element list-element-title"><p>{ phone }</p></div>
-      <div className="doctor-status list-element list-element-title">{allertsMapped}</div>
-      <div className="doctor-rooms list-element list-element-title" title={showRoomsTitle}><p>Rooms {showRooms}</p></div>
-      { context.getUserType() === 'admin' &&
+      <div
+        className="index-doctor list-element">
+          <p>{idx! + 1}</p>
+      </div>
+      <div
+        className="doctor-name list-element list-element-title">
+          <p className="list-title-name">{ name} </p>
+      </div>
+      <div
+        className="doctor-email list-element list-element-title">
+          <p>{ email }</p>
+      </div>
+      <div
+        className="doctor-number list-element list-element-title">
+          <p>{ phone }</p>
+      </div>
+      <div
+        className="doctor-status list-element list-element-title">
+          {allertsMapped}
+      </div>
+      <div
+        className="doctor-rooms list-element list-element-title"
+        title={showRoomsTitle}>
+          <p>Rooms {showRooms}</p>
+      </div>
+      { context.getUserType() === 'admin'&&
       <div className="doctor-interface">
-        <div onClick={showDeleteHandler} className="interface-element">
-          <span className="material-icons">delete_outline</span>
+        <div
+          onClick={showDeleteHandler}
+          className="interface-element">
+            <span className="material-icons">delete_outline</span>
         </div>
-        <div onClick={showUpdateModalHandler} className="interface-element">
-          <span className="material-icons">edit</span>
+        <div
+          onClick={showUpdateModalHandler}
+          className="interface-element">
+            <span className="material-icons">edit</span>
         </div>
       </div>
       }

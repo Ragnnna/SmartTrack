@@ -57,11 +57,26 @@ const DoctorDashboard: React.FC<DoctorDashboardProps> = (props) => {
           <p className="dashboard-content-status">doctor</p>
         </div>
         <div className="doctor-dashboard-interface-footer">
-          <span onClick={decrement} className="footer-interface-item count-event">-</span>
+          <span
+            onClick={decrement}
+            className="footer-interface-item count-event"
+          >
+            -
+          </span>
           <span className="footer-interface-item counter-value">{ sliceNumber }</span>
-          <span onClick={increment} className="footer-interface-item count-event">+</span>
+          <span
+            onClick={increment}
+            className="footer-interface-item count-event"
+          >
+            +
+          </span>
           <span className="interface-in-line">in line</span>
-          <button onClick={setSliceHandler} className="interface-stop-in-line">Stop to the line</button>
+          <button
+            onClick={setSliceHandler}
+            className="interface-stop-in-line"
+          >
+            Stop to the line
+          </button>
         </div>
       </div>
       {sliceItemNormalize(mappedDoctorDashboradItems, slicedNumber)}

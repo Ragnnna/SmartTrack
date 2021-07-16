@@ -33,9 +33,15 @@ const ChooseAllert: React.FC<ChooseAllertProps> = (props) => {
   return (
     <div className="choose-allert">
       <span className="choose-allert-title">choose the allert</span>
-      <select onChange={changeHandler} value={selectData} className="select-rooms">
+      <select
+        onChange={changeHandler}
+        value={selectData}
+        className="select-rooms"
+      >
         <option value={''} disabled>Choose Room</option>
-        {props.selectData === '1' && <option value={'1'} disabled>Invalid name</option>}
+        {props.selectData === '1' 
+          && <option value={'1'} disabled>Invalid name</option>
+        }
         {  mappedOptions() }
       </select>
         <div className="choose-allert-items">

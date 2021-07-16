@@ -6,6 +6,7 @@ import { AllertItemState } from './dashboardInterfaces'
 const DashboardAllertItem: React.FC<AllertItemState> = (props) => {
   const { title, color, isActive, setActive, id } = props
   const titleCircle = title[0].toLocaleUpperCase()
+  
   const setActiveHandler = () => {
     if(setActive){
       setActive(id)

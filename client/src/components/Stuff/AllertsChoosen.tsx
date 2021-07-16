@@ -10,7 +10,10 @@ const AllertsChoosen: React.FC<AllertsChoosenProps> = (props) => {
     <>
     <div className="allerts-chosened">
           <p><span className="allerts-chosened-title">Allerts </span>
-            <button onClick={clear} className="clear-btn">
+            <button
+              onClick={clear}
+              className="clear-btn"
+            >
               x
             </button>
           </p>
@@ -21,7 +24,10 @@ const AllertsChoosen: React.FC<AllertsChoosenProps> = (props) => {
         </div>
       <div className="show-choosen">
         <div className="allert-item-add">
-          <div onClick={choose} className="color-circle-add">
+          <div
+            onClick={choose}
+            className="color-circle-add"
+          >
             <span className="add-icon">+</span>
           </div>
           <div className="allert-item-text">

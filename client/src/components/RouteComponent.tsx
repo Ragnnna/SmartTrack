@@ -8,7 +8,6 @@ const RouteComponent: React.FC<RouteComponentProps> = (props) => {
 
   return(
     <>
-      
       <NavLink
         exact
         activeClassName="active-link"

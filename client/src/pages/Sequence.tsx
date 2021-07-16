@@ -29,7 +29,11 @@ const Sequence = () => {
   }, [data, loading])
   const mappedOptions = () => {
     return doctors.map((el: any) => {
-      return <option key={el.id} value={el.name}>{el.name}</option>
+      return <option
+      key={el.id}
+      value={el.name}>
+        {el.name}
+      </option>
     })
   }
 
@@ -80,7 +84,11 @@ const Sequence = () => {
       <div className="header-sequence">
         <div className="choose-doctor">
           <p>Choose a Doctor</p>
-          <select onChange={changeHandler} value={doctorName} className="select">
+          <select
+            onChange={changeHandler}
+            value={doctorName}
+            className="select"
+          >
             <option value={''} disabled>Choose</option>
             { mappedOptions() }
           </select>

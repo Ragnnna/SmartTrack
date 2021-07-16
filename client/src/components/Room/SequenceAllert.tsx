@@ -9,7 +9,12 @@ const SequenceAllert: React.FC<SequenceAllertProps> = (props) => {
       <div className="sequence-block">
       <div className="close-block">
         <div className="close-btn">
-        <span onClick={() => props.setSequenceModal(false)} className="material-icons">close</span>
+        <span
+          onClick={() => props.setSequenceModal(false)}
+          className="material-icons"
+        >
+          close
+        </span>
       </div>
         </div>
         <p className="sequence-title">Sequence is created.</p>

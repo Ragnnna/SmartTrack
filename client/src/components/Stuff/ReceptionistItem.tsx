@@ -20,16 +20,34 @@ const ReceptionistItem: React.FC<ReceptionistItemProps> = (props) => {
   }
   return (
     <div className="doctor-block">
-      <div className="index-doctor receptionist list-element"><p>{idx + 1}</p></div>
-      <div className="doctor-name list-element list-element-title-receptionist"><p className="list-title-name">{ name }</p></div>
-      <div className="doctor-email list-element list-element-title-receptionist"><p>{ email }</p></div>
-      <div className="doctor-number list-element list-element-title-receptionist"><p>{ phone }</p></div>
+      <div 
+        className="index-doctor receptionist list-element">
+          <p>{idx + 1}</p>
+      </div>
+      <div
+        className="doctor-name list-element list-element-title-receptionist">
+          <p className="list-title-name">{ name }</p>
+      </div>
+      <div
+        className="doctor-email list-element list-element-title-receptionist">
+          <p>{ email }</p>
+      </div>
+      <div
+        className="doctor-number list-element list-element-title-receptionist">
+          <p>{ phone }</p>
+      </div>
       {context.getUserType() === 'admin' &&
       <div className="receptionist-interface">
-        <div onClick={showDeleteHandler} className="interface-element">
+        <div
+          onClick={showDeleteHandler}
+          className="interface-element"
+        >
             <span className="material-icons">delete_outline</span>
           </div>
-          <div onClick={showUpdateModalHandler} className="interface-element">
+          <div
+            onClick={showUpdateModalHandler}
+            className="interface-element"
+          >
             <span className="material-icons">edit</span>
         </div>
       </div>
@@ -48,7 +66,8 @@ const ReceptionistItem: React.FC<ReceptionistItemProps> = (props) => {
         />
       }
       {deleteModal && <DeleteUserAccept 
-          deleteDoctor={props.deleteReceptionist} setDeleteModal={setDeleteModal} 
+          deleteDoctor={props.deleteReceptionist}
+          setDeleteModal={setDeleteModal} 
           id={id}
         />
       }
