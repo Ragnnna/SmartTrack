@@ -4,8 +4,8 @@ import { AllertDoctorItem, DoctorDashboardProps } from './dashboardInterfaces'
 import { DoctorDashboardItem } from './DoctorDashboardItem'
 
 const DoctorDashboard: React.FC<DoctorDashboardProps> = (props) => {
-  const [sliceNumber, setSliceNumber] = useState(9)
-  const [slicedNumber, setSlicedNumber] = useState(100)
+  const [sliceNumber, setSliceNumber] = useState<number>(9)
+  const [slicedNumber, setSlicedNumber] = useState<number>(100)
   const { name, allerts, email } = props.doctorData
   const newAllerts = allerts === "" 
   ? [] 

@@ -7,9 +7,9 @@ import { GET_ALLERTS } from '../query/allerts'
 import './pages.css'
 
 const Allerts: React.FC<AllertsProps> = (props) => {
-  const [ toggleModal, setToggleModal ] = useState(false)
+  const [ toggleModal, setToggleModal ] = useState<boolean>(false)
   const { data, loading, refetch } = useQuery(GET_ALLERTS)
-  const [allerts, setAllerts] = useState([])
+  const [allerts, setAllerts] = useState<AllertsItemProps[]>([])
   useEffect(() => {
     if(!loading){
       setAllerts(data.allerts)

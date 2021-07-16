@@ -32,8 +32,8 @@ const AddUser: React.FC<AddUserProps> = (props) => {
   const [updatedDoctorAllerts] = useMutation(UPDATE_DOCTOR_BY_EMAIL)
   const [updatedDoctor] = useMutation(UPDATE_DOCTOR)
   const doctorByEmail = useQuery(GET_DOCTOR_BY_EMAIL, { skip: true })
-  const [ , setToggle] = useState(false)
-  const [toggleChoose, setToggleChoose] = useState(false)
+  const [ , setToggle] = useState<boolean>(false)
+  const [toggleChoose, setToggleChoose] = useState<boolean>(false)
   const { name, email, phone, option, id } = props.userData
   const titleNormalize = (title: string): string => {
     return title.slice(0, 9) + '...'

@@ -13,7 +13,7 @@ import '../pages.css'
 const Login = () => {
   const context = useContext<any>(Context)
   const history = useHistory()
-  const [userType, setUserType] = useState('admin')
+  const [userType, setUserType] = useState<string>('admin')
   const doctor = useQuery(GET_DOCTOR, {
     skip: true
   })

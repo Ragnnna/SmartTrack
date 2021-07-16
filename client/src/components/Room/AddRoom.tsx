@@ -8,7 +8,7 @@ import { AddRoomProps } from './roomInterface'
 
 const AddRoom: React.FC<AddRoomProps> = (props) => {
   const { closeModal, type, id, titleRoom, setMountForce } = props
-  const [title, setTitle] = useState('')
+  const [title, setTitle] = useState<string>('')
   const changeHandler = (e: EventChange) => setTitle(e.currentTarget.value)
   const [newRoom] = useMutation(CREATE_ROOM)
   const [updatedRoom] = useMutation(UPDATE_ROOM)

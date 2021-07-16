@@ -9,7 +9,7 @@ import { Context } from '../../App'
 
 
 const Stuff = () => {
-  const [modaltoggle, setModalToggle] = useState(false)
+  const [modaltoggle, setModalToggle] = useState<boolean>(false)
   const context = useContext<any>(Context)
 
   return (

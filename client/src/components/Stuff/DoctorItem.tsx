@@ -9,8 +9,8 @@ import { Context } from '../../App'
 
 const DoctorItem: React.FC<DoctorItemProps> = (props) => {
   const context = useContext<any>(Context)
-  const [deleteModal, setDeleteModal] = useState(false)
-  const [editModal, setEditModal] = useState(false)
+  const [deleteModal, setDeleteModal] = useState<boolean>(false)
+  const [editModal, setEditModal] = useState<boolean>(false)
   const { name, email, phone, room, allerts, id, idx } = props
   const allertsArray = !allerts ? [] : JSON.parse(allerts)
   const showRooms = room.length > 1 

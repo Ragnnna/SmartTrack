@@ -7,8 +7,8 @@ import { Context } from '../../App'
 
 const AssistanceItem: React.FC<AssistanceItemProps> = (props) => {
   const context = useContext<any>(Context)
-  const [deleteModal, setDeleteModal] = useState(false)
-  const [editModal, setEditModal] = useState(false)
+  const [deleteModal, setDeleteModal] = useState<boolean>(false)
+  const [editModal, setEditModal] = useState<boolean>(false)
   const { name, email, phone, id, idx } = props
 
   const showDeleteHandler = (): void  => {

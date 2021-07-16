@@ -18,7 +18,7 @@ const Register = () => {
   const [newAssistante] = useMutation(CREATE_ASSISTANTE)
   const [newReceptionist] = useMutation(CREATE_RECEPTIONIST)
   const [newAdmin] = useMutation(CREATE_ADMIN)
-  const [userType, setUserType] = useState('admin')
+  const [userType, setUserType] = useState<string>('admin')
   const [user, setUser] = useState({
     name: '',
     email: '',
@@ -232,7 +232,13 @@ const Register = () => {
           </div>
           <div className="form-control">
             <div className="btn-position">
-              <button onClick={submitHandler} className="btn-submit" type="submit">SignIn</button>
+              <button
+                onClick={submitHandler}
+                className="btn-submit"
+                type="submit"
+              >
+                SignIn
+              </button>
             </div>
           </div>
           <div className="error-form">

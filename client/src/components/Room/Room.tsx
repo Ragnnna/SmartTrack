@@ -8,7 +8,7 @@ import { RoomProps } from './roomInterface'
 import { DeleteRoomAccept } from './DeleteRoomAccept'
 
 const Room: React.FC<RoomProps> = (props) => {
-  const [toggleModalDelete, setToggleModalDelete] = useState(false)
+  const [toggleModalDelete, setToggleModalDelete] = useState<boolean>(false)
 	const [editToggle, setEditToggle] = useState<boolean>(false)
   const [deletedRoom] = useMutation(DELETE_ROOM)
   const rooms = useQuery(GET_DOCTOR_ROOM, {

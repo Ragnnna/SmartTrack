@@ -8,9 +8,9 @@ import { GET_ROOMS } from '../../query/room'
 import { DragAreaProps } from './roomInterface'
 
 const DragArea: React.FC<DragAreaProps> = (props) => {
-  const [onBoard, setOnBoard] = useState(false)
+  const [onBoard, setOnBoard] = useState<boolean>(false)
   const [rooms, setRooms] = useState<any>([])
-  const [toggleModal, setToggleModal] = useState(false)
+  const [toggleModal, setToggleModal] = useState<boolean>(false)
   const openModal = () => setToggleModal(true)
   const closeModal = () => setToggleModal(false)
   const { data, loading, refetch } = useQuery(GET_ROOMS)

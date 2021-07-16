@@ -8,8 +8,8 @@ import '../components.css'
 import { AddAllertProps } from './allertsInterface'
 
 const AddAllert: React.FC<AddAllertProps> = (props) => {
-  const [, setToggle] = useState(false)
-  const [title, setTitle] = useState('')
+  const [, setToggle] = useState<boolean>(false)
+  const [title, setTitle] = useState<string>('')
   const [newAllert] = useMutation(ADD_ALLERT)
   const [updateAllert] = useMutation(UPDATE_ALLERT)
   const closeHandler = () => props.closeModal()

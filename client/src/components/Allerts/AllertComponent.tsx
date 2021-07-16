@@ -4,10 +4,10 @@ import '../components.css'
 import { AllertsItemProps } from '../componentsInterfaces'
 
 const AllertComponent: React.FC<AllertsItemProps> = (props) => {
-  const [toggle, setToggle] = useState(false)
+  const [toggle, setToggle] = useState<boolean>(false)
   const { idx, color, title, id, refetch, setForceRender } = props
-  const showModal = () => setToggle(state => true)
-  const closeModal = () => setToggle(state => false)
+  const showModal = () => setToggle(() => true)
+  const closeModal = () => setToggle(() => false)
   
   return (
     <div className="allerts-component">
