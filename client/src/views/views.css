@@ -1,0 +1,19 @@
+.auth-view {
+  max-width: 1920px;
+  min-height: 700px;
+  height: auto;
+}
+
+.main-view {
+  display: flex;
+}
+
+.nav-bar-block {
+  width: 262px;
+}
+
+.content {
+  display: flex;
+  width: 100%;
+  height: auto;
+}

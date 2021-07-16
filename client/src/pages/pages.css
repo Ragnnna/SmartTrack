@@ -1,0 +1,216 @@
+.login-page {
+  width: 100%;
+  height: auto;
+}
+
+.login-form {
+  width: 450px;
+  min-height: 350px;
+  height: auto;
+  border-radius: 13px;
+  margin: 150px auto;
+  background: rgb(106, 127, 168);
+}
+
+.auth-title {
+  width: max-content;
+  height: 30px;
+  background: rgb(165, 185, 165);
+  padding: 20px 20px;
+  margin: auto;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+}
+
+.auth-title > p {
+  color: black;
+  font-weight: bolder;
+  font-size: 30px;
+  width: max-content;
+  margin-top: -8px;
+}
+
+.form-control {
+  padding: 5px;
+  width: 300px;
+  margin: 10px auto;
+}
+
+.form-element {
+  display: block;
+}
+
+.error-form {
+  position: relative;
+  width: max-content;
+  margin: auto;
+  bottom: 20px;
+  color: rgb(83, 19, 19);
+}
+
+input.form-element {
+  background-color: inherit;
+  outline: none;
+  border: none;
+  margin-top: 5px;
+  padding: 2px 1px;
+  font-size: 18px;
+  color: rgb(11, 11, 43);
+  font-weight: bold;
+  width: 100%;
+  border-bottom: 1px solid rgb(56, 56, 56);
+}
+
+.form-control-title {
+  font-weight: bold;
+}
+
+input.form-element:focus {
+  border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.btn-submit {
+  background-color: rgba(7, 31, 87, 0.6);
+  color: rgb(201, 201, 201);
+  outline: none;
+  border: none;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.btn-position {
+  width: max-content;
+  margin: auto;
+}
+
+.form-control-radios {
+  width: 400px;
+  margin: auto;
+  display: flex;
+  flex-wrap: bold;
+  font-size: 18px;
+  text-align: center;
+}
+
+.radio-position {
+  margin: 10px;
+}
+
+.radio-title {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.stuff-page {
+  width: 100%;
+  height: auto;
+}
+
+.contetn-stuff {
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  margin-top: 60px;
+}
+
+.allerts-page {
+  width: 100%;
+}
+
+.header-allerts {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.block-header-allerts {
+  width: 100px;
+  height: 30px;
+}
+
+.allerts-container {
+  height: auto;
+  width: auto;
+  margin: 70px auto;
+}
+
+.sequence-page {
+  width: 100%;
+  height: auto;
+}
+
+.header-sequence {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.choose-doctor {
+  margin: 43px 0 0 41px;
+  font-weight: bold;
+}
+
+.select {
+  font-size: 16px;
+  padding: 9px 165px 10px 20px;
+  outline: none;
+  border: none;
+  background: inherit;
+  border: 1px solid rgb(185, 199, 214);
+  border-radius: 36px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.dashboard-page {
+  width: 100%;
+  padding-right: 17px;
+  min-height: 240px;
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+.responsibilities-page {
+  width: 100%;
+  height: auto;
+}
+
+.container-responsibilities {
+  width: 85%;
+  margin: 150px auto;
+  min-height: 500px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.doctors-assistant-page {
+  width: 100%;
+  padding: 0 121px;
+  margin: auto;
+  height: auto;
+}
+
+.header-assistant-page {
+  width: 100%;
+  min-height: 100px;
+}
+
+.header-assistant-page > p {
+  color: #5bada5;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 100px;
+}
+
+.doctors-assistant-page-content {
+  width: 100%;
+  min-height: 300px;
+  height: auto;
+}
